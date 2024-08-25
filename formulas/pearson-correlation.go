@@ -28,5 +28,4 @@ func PearsonCorrelation(x, y []float64) float64 {
 		return 0
 	}
 	return sumNumerator / denominator
-
 }

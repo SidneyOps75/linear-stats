@@ -1,11 +1,16 @@
 package main
 
 import (
-	"go/scanner"
+	"log"
 	"os"
+
+	file "linear-stats/filescanner"
 )
 
 func main() {
-	filename := os.Args[1]
-	scanner.InputScanner(filename)
+	if len(os.Args) < 2 {
+		log.Fatal("Usage:go run . data.txt")
+	}
+	fileName := os.Args[1]
+	file.InputScanner(fileName)
 }

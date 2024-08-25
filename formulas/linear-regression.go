@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func LinearRegression(x []float64, y []float64) (float64, float64) {
+func LinearRegression(x, y []float64) (float64, float64) {
 	if len(x) != len(y) || len(x) == 0 {
 		log.Fatal("x and y must have the same non-zero length")
 	}
@@ -21,5 +21,4 @@ func LinearRegression(x []float64, y []float64) (float64, float64) {
 	m := sumNumerator / sumDenominator
 	b := meanY - m*meanX
 	return m, b
-
 }
